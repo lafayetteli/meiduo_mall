@@ -63,8 +63,13 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'payments.apps.PaymentsConfig',
 
+
     'haystack',
     'django_crontab',  # 定时任务
+    'rest_framework',
+    'corsheaders',
+    'meiduo_admin.apps.MeiduoAdminConfig',
+
 ]
 
 MIDDLEWARE = [
