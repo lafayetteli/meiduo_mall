@@ -1,0 +1,340 @@
+ERROR 2019-05-26 03:23:40,296 exception 80 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2019-05-26 03:23:40,367 basehttp 124 "GET / HTTP/1.1" 400 76713
+ERROR 2019-05-26 03:23:40,560 exception 80 Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+WARNING 2019-05-26 03:23:40,672 basehttp 124 "GET /favicon.ico HTTP/1.1" 400 76766
+ERROR 2019-05-26 03:23:54,958 exception 135 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/db/utils.py", line 176, in ensure_defaults
+    conn = self.databases[alias]
+KeyError: 'slave'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/python/Desktop/meiduo_admin/meiduo_mall/meiduo_mall/apps/contents/views.py", line 10, in get
+    categories=get_categories()
+  File "/home/python/Desktop/meiduo_admin/meiduo_mall/meiduo_mall/utils/categories.py", line 41, in get_categories
+    for channel in channel_list:
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/db/models/query.py", line 250, in __iter__
+    self._fetch_all()
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/db/models/query.py", line 1118, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/db/models/query.py", line 50, in __iter__
+    compiler = queryset.query.get_compiler(using=db)
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/db/models/sql/query.py", line 255, in get_compiler
+    connection = connections[using]
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/db/utils.py", line 208, in __getitem__
+    self.ensure_defaults(alias)
+  File "/home/python/.virtualenvs/meiduo5_admin/lib/python3.5/site-packages/django/db/utils.py", line 178, in ensure_defaults
+    raise ConnectionDoesNotExist("The connection %s doesn't exist" % alias)
+django.db.utils.ConnectionDoesNotExist: The connection slave doesn't exist
+ERROR 2019-05-26 03:23:55,074 basehttp 124 "GET / HTTP/1.1" 500 119478
+WARNING 2019-05-26 03:23:55,278 base 152 Not Found: /favicon.ico
+WARNING 2019-05-26 03:23:55,294 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 8283
+INFO 2019-05-26 03:24:38,110 basehttp 124 "GET / HTTP/1.1" 200 124657
+WARNING 2019-05-26 03:24:38,164 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 1649
+WARNING 2019-05-26 03:24:38,164 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 1655
+WARNING 2019-05-26 03:24:38,166 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 1658
+WARNING 2019-05-26 03:24:38,171 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 1667
+WARNING 2019-05-26 03:24:38,208 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 404 1688
+WARNING 2019-05-26 03:24:38,215 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 1685
+WARNING 2019-05-26 03:24:38,274 basehttp 124 "GET /static/js/common.js HTTP/1.1" 404 1655
+WARNING 2019-05-26 03:24:38,275 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 404 1652
+WARNING 2019-05-26 03:24:38,287 basehttp 124 "GET /static/js/index.js HTTP/1.1" 404 1652
+WARNING 2019-05-26 03:24:38,307 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 1664
+INFO 2019-05-26 03:24:56,997 basehttp 124 "GET / HTTP/1.1" 200 124657
+WARNING 2019-05-26 03:24:57,027 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:24:57,031 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:24:57,034 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,039 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:24:57,040 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,045 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:24:57,045 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,047 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,085 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:24:57,086 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,093 base 152 Not Found: /static/js/jquery-1.12.4.min.js
+WARNING 2019-05-26 03:24:57,094 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,101 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:24:57,101 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,104 base 152 Not Found: /static/js/slide.js
+WARNING 2019-05-26 03:24:57,111 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,115 base 152 Not Found: /static/js/common.js
+WARNING 2019-05-26 03:24:57,119 basehttp 124 "GET /static/js/common.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:24:57,127 base 152 Not Found: /static/js/index.js
+WARNING 2019-05-26 03:24:57,127 basehttp 124 "GET /static/js/index.js HTTP/1.1" 404 970
+INFO 2019-05-26 03:25:29,947 basehttp 124 "GET / HTTP/1.1" 200 124657
+WARNING 2019-05-26 03:25:29,973 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:25:29,978 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:25:29,980 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:29,987 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:29,997 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:25:29,997 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:29,999 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:25:29,999 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:30,001 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:25:30,002 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:30,011 base 152 Not Found: /static/js/jquery-1.12.4.min.js
+WARNING 2019-05-26 03:25:30,011 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:30,012 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:25:30,013 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:30,032 base 152 Not Found: /static/js/slide.js
+WARNING 2019-05-26 03:25:30,038 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:30,038 base 152 Not Found: /static/js/common.js
+WARNING 2019-05-26 03:25:30,039 basehttp 124 "GET /static/js/common.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:30,047 base 152 Not Found: /static/js/index.js
+WARNING 2019-05-26 03:25:30,047 basehttp 124 "GET /static/js/index.js HTTP/1.1" 404 970
+INFO 2019-05-26 03:25:47,832 basehttp 124 "GET / HTTP/1.1" 200 124657
+WARNING 2019-05-26 03:25:47,848 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:25:47,851 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,853 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:25:47,854 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,857 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:25:47,858 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,874 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:25:47,874 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,875 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:25:47,875 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,885 base 152 Not Found: /static/js/jquery-1.12.4.min.js
+WARNING 2019-05-26 03:25:47,888 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,891 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:25:47,891 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,911 base 152 Not Found: /static/js/slide.js
+WARNING 2019-05-26 03:25:47,912 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,916 base 152 Not Found: /static/js/common.js
+WARNING 2019-05-26 03:25:47,917 basehttp 124 "GET /static/js/common.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:25:47,921 base 152 Not Found: /static/js/index.js
+WARNING 2019-05-26 03:25:47,921 basehttp 124 "GET /static/js/index.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:26:04,673 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:26:04,674 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:26:04,803 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:26:04,806 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:26:04,809 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:26:04,810 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:26:04,817 base 152 Not Found: /static/images/missing.png
+WARNING 2019-05-26 03:26:04,818 basehttp 124 "GET /static/images/missing.png HTTP/1.1" 404 970
+INFO 2019-05-26 03:27:49,402 basehttp 124 "GET / HTTP/1.1" 200 124657
+WARNING 2019-05-26 03:27:49,433 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:27:49,441 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:27:49,442 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,439 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:27:49,442 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,443 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,444 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:27:49,445 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,446 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:27:49,446 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,457 base 152 Not Found: /static/js/jquery-1.12.4.min.js
+WARNING 2019-05-26 03:27:49,461 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,476 base 152 Not Found: /static/js/slide.js
+WARNING 2019-05-26 03:27:49,476 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,484 base 152 Not Found: /static/js/common.js
+WARNING 2019-05-26 03:27:49,484 basehttp 124 "GET /static/js/common.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,491 base 152 Not Found: /static/js/index.js
+WARNING 2019-05-26 03:27:49,492 basehttp 124 "GET /static/js/index.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:27:49,496 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:27:49,505 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+ERROR 2019-05-26 03:28:16,147 exception 80 Invalid HTTP_HOST header: 'www.meiduo.site:8000'. You may need to add 'www.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2019-05-26 03:28:16,162 basehttp 124 "GET / HTTP/1.1" 400 26
+ERROR 2019-05-26 03:28:17,565 exception 80 Invalid HTTP_HOST header: 'www.meiduo.site:8000'. You may need to add 'www.meiduo.site' to ALLOWED_HOSTS.
+WARNING 2019-05-26 03:28:17,566 basehttp 124 "GET / HTTP/1.1" 400 26
+INFO 2019-05-26 03:28:26,443 basehttp 124 "GET / HTTP/1.1" 200 124657
+WARNING 2019-05-26 03:28:26,463 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:28:26,465 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:28:26,466 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,469 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:28:26,470 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,475 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,492 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:28:26,493 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,497 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:28:26,500 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,502 base 152 Not Found: /static/js/jquery-1.12.4.min.js
+WARNING 2019-05-26 03:28:26,512 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,516 base 152 Not Found: /static/js/slide.js
+WARNING 2019-05-26 03:28:26,521 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,526 base 152 Not Found: /static/js/common.js
+WARNING 2019-05-26 03:28:26,559 basehttp 124 "GET /static/js/common.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,560 base 152 Not Found: /static/js/index.js
+WARNING 2019-05-26 03:28:26,560 basehttp 124 "GET /static/js/index.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:28:26,551 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:28:26,560 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+INFO 2019-05-26 03:30:24,324 basehttp 124 "GET / HTTP/1.1" 200 124657
+WARNING 2019-05-26 03:30:24,347 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:30:24,349 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,362 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:30:24,363 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,364 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:30:24,364 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,366 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:30:24,366 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,367 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:30:24,368 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,381 base 152 Not Found: /static/js/jquery-1.12.4.min.js
+WARNING 2019-05-26 03:30:24,382 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,407 base 152 Not Found: /static/js/slide.js
+WARNING 2019-05-26 03:30:24,408 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,427 base 152 Not Found: /static/js/common.js
+WARNING 2019-05-26 03:30:24,446 basehttp 124 "GET /static/js/common.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,443 base 152 Not Found: /static/js/index.js
+WARNING 2019-05-26 03:30:24,454 basehttp 124 "GET /static/js/index.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:24,450 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:30:24,456 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:35,994 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:30:35,995 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:36,121 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:30:36,125 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:36,128 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:30:36,128 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:30:36,133 base 152 Not Found: /static/images/missing.png
+WARNING 2019-05-26 03:30:36,134 basehttp 124 "GET /static/images/missing.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:31:56,690 base 152 Not Found: /static/index.html
+WARNING 2019-05-26 03:31:56,706 basehttp 124 "GET /static/index.html HTTP/1.1" 404 970
+WARNING 2019-05-26 03:31:56,729 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:31:56,730 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:31:56,735 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:31:56,736 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:31:56,742 base 152 Not Found: /static/images/missing.png
+WARNING 2019-05-26 03:31:56,742 basehttp 124 "GET /static/images/missing.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:26,515 base 152 Not Found: /static/detail/1.html
+WARNING 2019-05-26 03:32:26,532 basehttp 124 "GET /static/detail/1.html HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:26,548 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:32:26,550 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:32:26,551 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:26,556 base 152 Not Found: /static/images/missing.png
+WARNING 2019-05-26 03:32:26,561 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:26,570 basehttp 124 "GET /static/images/missing.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:55,646 base 152 Not Found: /static/index.html
+WARNING 2019-05-26 03:32:55,669 basehttp 124 "GET /static/index.html HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:55,693 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:32:55,695 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:55,698 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:32:55,698 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:55,703 base 152 Not Found: /static/images/missing.png
+WARNING 2019-05-26 03:32:55,704 basehttp 124 "GET /static/images/missing.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:56,441 base 152 Not Found: /static/index.html
+WARNING 2019-05-26 03:32:56,453 basehttp 124 "GET /static/index.html HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:56,472 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:32:56,474 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:32:56,477 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:56,479 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:32:56,497 base 152 Not Found: /static/images/missing.png
+WARNING 2019-05-26 03:32:56,499 basehttp 124 "GET /static/images/missing.png HTTP/1.1" 404 970
+INFO 2019-05-26 03:33:22,020 basehttp 124 "GET /register/ HTTP/1.1" 200 4616
+WARNING 2019-05-26 03:33:22,041 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:33:22,041 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:33:22,051 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:33:22,056 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:33:22,055 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:33:22,056 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:33:22,062 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:33:22,063 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:33:22,065 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:33:22,067 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:33:22,071 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:33:22,079 base 152 Not Found: /static/js/register.js
+WARNING 2019-05-26 03:33:22,081 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+WARNING 2019-05-26 03:33:22,082 basehttp 124 "GET /static/js/register.js HTTP/1.1" 404 970
+INFO 2019-05-26 03:35:11,168 basehttp 124 "GET /register/ HTTP/1.1" 200 4616
+WARNING 2019-05-26 03:35:11,186 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:35:11,188 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:11,196 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:35:11,201 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:11,198 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:35:11,202 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:11,208 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:35:11,208 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:11,215 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:35:11,217 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:11,218 base 152 Not Found: /static/js/register.js
+WARNING 2019-05-26 03:35:11,228 basehttp 124 "GET /static/js/register.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:11,230 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:35:11,240 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+INFO 2019-05-26 03:35:23,605 basehttp 124 "GET /register/ HTTP/1.1" 200 4616
+WARNING 2019-05-26 03:35:23,631 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:35:23,635 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:35:23,636 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:23,641 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:35:23,641 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:23,645 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:23,651 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:35:23,652 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:23,654 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:35:23,654 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:23,670 base 152 Not Found: /static/js/register.js
+WARNING 2019-05-26 03:35:23,673 basehttp 124 "GET /static/js/register.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:23,675 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:35:23,681 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+INFO 2019-05-26 03:35:24,479 basehttp 124 "GET /register/ HTTP/1.1" 200 4616
+WARNING 2019-05-26 03:35:24,487 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:35:24,489 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:24,500 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:35:24,500 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:24,503 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:35:24,512 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:24,517 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:35:24,519 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:35:24,521 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:24,527 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:24,530 base 152 Not Found: /static/js/register.js
+WARNING 2019-05-26 03:35:24,537 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:35:24,553 basehttp 124 "GET /static/js/register.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:24,554 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+INFO 2019-05-26 03:35:39,649 basehttp 124 "GET /register/ HTTP/1.1" 200 4616
+WARNING 2019-05-26 03:35:39,663 base 152 Not Found: /static/css/reset.css
+WARNING 2019-05-26 03:35:39,675 base 152 Not Found: /static/css/main.css
+WARNING 2019-05-26 03:35:39,682 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:39,684 base 152 Not Found: /static/js/host.js
+WARNING 2019-05-26 03:35:39,688 basehttp 124 "GET /static/css/main.css HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:39,697 base 152 Not Found: /static/js/vue-2.5.16.js
+WARNING 2019-05-26 03:35:39,699 basehttp 124 "GET /static/js/host.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:39,705 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:39,701 base 152 Not Found: /static/js/axios-0.18.0.min.js
+WARNING 2019-05-26 03:35:39,714 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:39,707 base 152 Not Found: /static/js/register.js
+WARNING 2019-05-26 03:35:39,717 basehttp 124 "GET /static/js/register.js HTTP/1.1" 404 970
+WARNING 2019-05-26 03:35:39,724 base 152 Not Found: /static/images/logo.png
+WARNING 2019-05-26 03:35:39,734 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 404 970
+INFO 2019-05-26 03:36:35,258 basehttp 124 "GET /register/ HTTP/1.1" 200 4616
+INFO 2019-05-26 03:36:35,275 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2019-05-26 03:36:35,279 basehttp 124 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2019-05-26 03:36:35,290 basehttp 124 "GET /static/js/host.js HTTP/1.1" 200 120
+INFO 2019-05-26 03:36:35,291 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2019-05-26 03:36:35,292 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2019-05-26 03:36:35,307 basehttp 124 "GET /static/js/register.js HTTP/1.1" 200 9786
+INFO 2019-05-26 03:36:35,310 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2019-05-26 03:36:35,507 basehttp 124 "GET /static/images/interval_line.png HTTP/1.1" 200 1123
+INFO 2019-05-26 03:36:35,513 basehttp 124 "GET /static/images/register_banner.png HTTP/1.1" 200 54894
+INFO 2019-05-26 03:36:35,524 basehttp 124 "GET /static/images/icons02.png HTTP/1.1" 200 3935
+INFO 2019-05-26 03:36:56,569 basehttp 124 "GET /register/ HTTP/1.1" 200 4616
+INFO 2019-05-26 03:36:56,595 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 304 0
+INFO 2019-05-26 03:36:56,598 basehttp 124 "GET /static/css/main.css HTTP/1.1" 304 0
+INFO 2019-05-26 03:36:56,603 basehttp 124 "GET /static/js/host.js HTTP/1.1" 304 0
+INFO 2019-05-26 03:36:56,611 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 304 0
+INFO 2019-05-26 03:36:56,618 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 304 0
+INFO 2019-05-26 03:36:56,635 basehttp 124 "GET /static/js/register.js HTTP/1.1" 304 0
+INFO 2019-05-26 03:36:56,636 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 304 0
+INFO 2019-06-04 08:21:40,617 basehttp 124 "GET / HTTP/1.1" 200 124657
+INFO 2019-06-04 08:21:40,673 basehttp 124 "GET /static/js/host.js HTTP/1.1" 200 120
+INFO 2019-06-04 08:21:40,681 basehttp 124 "GET /static/css/reset.css HTTP/1.1" 200 638
+INFO 2019-06-04 08:21:40,681 basehttp 124 "GET /static/js/axios-0.18.0.min.js HTTP/1.1" 200 12941
+INFO 2019-06-04 08:21:40,693 basehttp 124 "GET /static/css/main.css HTTP/1.1" 200 39722
+INFO 2019-06-04 08:21:40,697 basehttp 124 "GET /static/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+INFO 2019-06-04 08:21:40,698 basehttp 124 "GET /static/js/vue-2.5.16.js HTTP/1.1" 200 289307
+INFO 2019-06-04 08:21:40,719 basehttp 124 "GET /static/images/logo.png HTTP/1.1" 200 7450
+INFO 2019-06-04 08:21:40,721 basehttp 124 "GET /static/js/slide.js HTTP/1.1" 200 1822
+INFO 2019-06-04 08:21:40,723 basehttp 124 "GET /static/js/index.js HTTP/1.1" 200 1418
+INFO 2019-06-04 08:21:40,725 basehttp 124 "GET /static/js/common.js HTTP/1.1" 200 891
+INFO 2019-06-04 08:21:41,117 basehttp 124 "GET /static/images/icons.png HTTP/1.1" 200 7740
+WARNING 2019-06-04 08:21:48,816 base 152 Not Found: /favicon.ico
+WARNING 2019-06-04 08:21:48,819 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 8277
