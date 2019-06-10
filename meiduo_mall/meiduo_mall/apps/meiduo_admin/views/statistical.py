@@ -77,11 +77,8 @@ class UserMonthCountView(APIView):
 
 class GoodsDayView(APIView):
     def get(self, request):
-        # 获取当天日期
         now_date = date.today()
-        # 获取当天访问的商品分类数量信息
         data = GoodsVisitCount.objects.filter(date=now_date)
-        # 序列化返回分类数量
         ser = GoodsSerializer(data, many=True)
 
         return Response(ser.data)
