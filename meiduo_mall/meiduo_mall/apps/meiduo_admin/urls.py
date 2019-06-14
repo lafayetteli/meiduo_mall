@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from rest_framework_jwt.views import obtain_jwt_token
-from .views import statistical,users,specs
+from .views import statistical,users,specs,skus
 from rest_framework.routers import DefaultRouter
 urlpatterns = [
     url(r'^authorizations/$', obtain_jwt_token),
@@ -16,4 +16,6 @@ urlpatterns = [
 ]
 routers = DefaultRouter()
 routers.register('goods/specs',specs.SpecsView,base_name='spers')
+routers.register('skus',skus.SKUGoodsView,base_name='skus')
+
 urlpatterns += routers.urls
